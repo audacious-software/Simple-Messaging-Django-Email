@@ -102,3 +102,8 @@ STATIC_ROOT = 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR) + '/media/'
+
+
+SIMPLE_MESSAGING_COUNTRY_CODE = 'us'
+SIMPLE_MESSAGING_DEFAULT_FROM_ADDRESS = 'Example Bot <bot@example.com>'
+SIMPLE_MESSAGING_DEFAULT_SUBJECT = 'Test message from Circle CI'
