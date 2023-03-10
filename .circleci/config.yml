@@ -38,7 +38,7 @@ jobs:
             mkdir django
             cd django
             django-admin.py startproject sm
-            mv ../simple_messaging_twilio sm
+            mv ../simple_messaging_email sm
             cd sm
             git clone https://github.com/audacious-software/Quicksilver-Django.git quicksilver
             pip install -r quicksilver/requirements.txt --progress-bar off
@@ -55,7 +55,7 @@ jobs:
             pylint simple_messaging_email
             bandit -r .
       - save_cache:
-          key: venv-38-{{ .Branch }}-{{ checksum "/home/circleci/django/sm/simple_messaging_twilio/requirements.txt" }}
+          key: venv-38-{{ .Branch }}-{{ checksum "/home/circleci/django/sm/simple_messaging_email/requirements.txt" }}
           paths:
             - "/home/circleci/venv"
       - store_test_results:
@@ -88,7 +88,7 @@ jobs:
             pip install --upgrade pip
             pip install -r requirements.txt --progress-bar off
             cd ..
-            mv project simple_messaging_twilio
+            mv project simple_messaging_email
             mkdir django
             cd django
             django-admin.py startproject sm
@@ -108,7 +108,7 @@ jobs:
             pylint simple_messaging
             pylint simple_messaging_email
       - save_cache:
-          key: venv-27-{{ .Branch }}-{{ checksum "/home/circleci/django/sm/simple_messaging_twilio/requirements.txt" }}
+          key: venv-27-{{ .Branch }}-{{ checksum "/home/circleci/django/sm/simple_messaging_email/requirements.txt" }}
           paths:
             - "/home/circleci/venv"
       - store_test_results:
