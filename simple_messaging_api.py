@@ -11,7 +11,7 @@ from django.template import Template, Context
 
 EMAIL_REGEX = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
 
-def process_outgoing_message(outgoing_message, metadata=None): # pylint: disable=too-many-branches
+def process_outgoing_message(outgoing_message, metadata=None): # pylint: disable=too-many-branches, too-many-locals
     if metadata is None:
         metadata = {}
 
@@ -32,7 +32,10 @@ def process_outgoing_message(outgoing_message, metadata=None): # pylint: disable
 
             from_address = transmission_metadata.get('email_from_address', settings.SIMPLE_MESSAGING_DEFAULT_FROM_ADDRESS)
 
-            email = EmailMultiAlternatives(outgoing_message_subject, outgoing_message_content, from_address, [destination])
+            cc_addresses = transmission_metadata.get('email_cc_addresses', [])
+            bcc_addresses = transmission_metadata.get('email_bcc_addresses', [])
+
+            email = EmailMultiAlternatives(outgoing_message_subject, outgoing_message_content, from_address, [destination], cc=cc_addresses, bcc=bcc_addresses)
 
             html_content = transmission_metadata.get('email_html_content', None)
 
