@@ -65,5 +65,5 @@ def simple_messaging_media_enabled(outgoing_message): # pylint: disable=unused-a
 
     return re.fullmatch(EMAIL_REGEX, destination)
 
-def process_incoming_request(request): # pylint: disable=unused-argument
-    return HttpResponse('Not implemented', status_code=501, content_type='text/plain')
+# def process_incoming_request(request): # pylint: disable=unused-argument
+#    return HttpResponse('Not implemented', status_code=501, content_type='text/plain')
