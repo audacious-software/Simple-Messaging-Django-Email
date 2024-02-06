@@ -6,7 +6,6 @@ import re
 
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
-from django.http import HttpResponse
 from django.template import Template, Context
 
 EMAIL_REGEX = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
