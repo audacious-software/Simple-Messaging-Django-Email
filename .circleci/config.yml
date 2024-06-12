@@ -46,6 +46,8 @@ jobs:
             pip install -r quicksilver/requirements.txt --progress-bar off
             git clone https://github.com/audacious-software/Simple-Messaging-Django.git simple_messaging
             pip install -r simple_messaging/requirements.txt --progress-bar off
+            git https://github.com/audacious-software/Simple-Dashboard-Django.git simple_dashboard
+            pip install -r simple_dashboard/requirements.txt --progress-bar off
             cp simple_messaging_email/circle_settings.py sm/settings.py
             cp simple_messaging_email/circle_urls.py sm/urls.py
             mkdir -p media/incoming_message_media
@@ -100,6 +102,8 @@ jobs:
             pip install -r quicksilver/requirements.txt --progress-bar off
             git clone https://github.com/audacious-software/Simple-Messaging-Django.git simple_messaging
             pip install -r simple_messaging/requirements.txt --progress-bar off
+            git https://github.com/audacious-software/Simple-Dashboard-Django.git simple_dashboard
+            pip install -r simple_dashboard/requirements.txt --progress-bar off
             cp simple_messaging_email/circle_settings.py sm/settings.py
             cp simple_messaging_email/circle_urls.py sm/urls.py
             mkdir -p media/incoming_message_media
@@ -154,6 +158,8 @@ jobs:
             pip install -r quicksilver/requirements.txt --progress-bar off
             git clone https://github.com/audacious-software/Simple-Messaging-Django.git simple_messaging
             pip install -r simple_messaging/requirements.txt --progress-bar off
+            git https://github.com/audacious-software/Simple-Dashboard-Django.git simple_dashboard
+            pip install -r simple_dashboard/requirements.txt --progress-bar off
             cp simple_messaging_email/circle_settings.py sm/settings.py
             cp simple_messaging_email/circle_urls.py sm/urls.py
             mkdir -p media/incoming_message_media
@@ -208,6 +214,8 @@ jobs:
             pip install -r quicksilver/requirements.txt --progress-bar off
             git clone https://github.com/audacious-software/Simple-Messaging-Django.git simple_messaging
             pip install -r simple_messaging/requirements.txt --progress-bar off
+            git https://github.com/audacious-software/Simple-Dashboard-Django.git simple_dashboard
+            pip install -r simple_dashboard/requirements.txt --progress-bar off
             cp simple_messaging_email/circle_settings.py sm/settings.py
             cp simple_messaging_email/circle_urls.py sm/urls.py
             mkdir -p media/incoming_message_media
